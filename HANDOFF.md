@@ -1,7 +1,8 @@
 # 引き継ぎ（Cowork → Claude Code）
 
 ## 状態（2026-10-20）
-- skill/ に初稿 v0.1.0。SKILL.md と references/（core, scenes×7, feedback, modes×3）。
+- `.claude/skills/hayashi-lens/` に v0.2。SKILL.md と references/（core, scenes×7, knowledge×3, feedback, modes×3）。Claude Code のスキル仕様に合わせた。版は git で管理。
+- 構成：SKILL.md＝入口と手順の要点。core＝手順の全文。scenes＝求められたことごとの手順。knowledge＝観点ごとの経験知（場面をまたぐ）。feedback＝返し方。modes＝用途ごとの出力の形。スキルには本人の言葉・案件・人名を入れない。根拠は docs/casestudies.md。
 - 確度：事業部長として受ける場面（報告の確認、承認、計画のずれ、相談、外に出すもの）は本人の対話に基づき高い。合否・助言・仕様の見方は本人の記述が薄く低い。プロデューサー・ディレクター・ゲームデザイナーとして返す場面は未着手に近い。
 - docs/concept.md に目的・本質・却下された進め方。docs/casestudies.md に本人が語った判断。
 - Basic Memory（project: main）「林判断スキル（疑似人格による評価・FBスキル）構想」に同じ経緯。
@@ -22,7 +23,7 @@
 
 ## Code で使うプロンプト（原文）
 ### スキルを適用する
-「skill/SKILL.md と references を読み、以下の資料を {1次チェック|レビュー補助|壁打ち} モードで見てください。最初に、何を求められたものと受け取ったか、誰に届くと見たかを書いてください。」
+「hayashi-lens スキルで、以下の資料を {1次チェック|レビュー補助|壁打ち} モードで見てください。最初に、何を求められたものと受け取ったか、誰に届くと見たかを書いてください。」
 
 ### ケーススタディを反映する
 「docs/casestudies.md の新しい記録を読み、該当する scenes/*.md に反映してください。本人の言葉を言い換えないこと。確度の表記を更新すること。」
