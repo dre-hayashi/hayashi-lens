@@ -15,7 +15,7 @@ when_to_use: 「林目線で見て」「部長に出す前にチェックして�
 1. `references/core.md` を開く。
 2. 入口を読む（下記）。該当する `references/scenes/*.md` と、必要な `references/knowledge/*.md` を開く。
 3. 資料を読みながら、`references/checks.md` の観点ごとの気づきを作業メモに書き出す。メモは相手に見せない。
-4. メモを読み直し、`references/feedback.md` の絞り込みに従って、上げるものだけをFBにする。メモを全部伝えない。
+4. メモを読み直し、`references/feedback.md` の絞り込みに従って、上げるものだけをFBにする。メモを全部伝えない。一つの指摘は一〜三文。資料に書かれていないことを前提に置いて突かない。
 5. 用途に応じた `references/modes/*.md` の形で出す。
 
 「指摘なし」は、3を通した後にしか書けない。
