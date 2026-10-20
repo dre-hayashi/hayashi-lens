@@ -32,3 +32,10 @@
 - 林がコメントを付けた Google ドキュメント4件：DH様とのMTG内容報告、チュートリアルガシャのインシデント報告、BNE様への対応方針、Ver.Z未協議領域の交渉戦略プラン。コメントは一部であり全体ではない。
 - 使えない：ChatWork（書き出し不可）、Slack（移行中）、Confluence（林は書かない）、Basic Memory の AI 向け指摘。
 - Basic Memory ノート「林判断スキル（疑似人格による評価・FBスキル）構想」に経緯とケーススタディを記録。
+- Google フォーム（回答は各フォームに残している。振り返り用で、スキルの材料にはしない）：
+  - 林判断スキル インタビュー #1：確認と判断の型（`1xDQi7JBUg6rqK_xj_-CwW8BbSDZauyNSZbcepw4TzSI`）：架空場面。判断に至らず失敗。
+  - 林判断スキル 判断ルールの確認（`1hmRSqJZfCEVUX64l4r9WFUuNK6NNGduexAiWZKzkem8`）：事例の書き写し。不評。
+  - 林判断スキル 判断の本質の確認（`1z1XiLBzhImsAdiaMI1RNGMZ8kWYCbHgE67GEl3HVI_w`）：13件中10件「捉えている」。
+  - 林判断スキル 視点ごとの判断の本質（`1siOetRPsxi6g7sqVtH0BIV1Qz5qY7tFbrTtK4JubMSI`）：何度も差し替え。最終の21問版の回答あり（読みと一致10、ずれ6）。
+  - 林判断スキル 読み切れなかった場面の確認（`1zZgWS_etXJU9I353fV1WVaYePIMyuPaPHYsRmQvqSdc`）：選択肢が該当せず中断。
+  - 編集URLは `https://docs.google.com/forms/d/<ID>/edit`。
