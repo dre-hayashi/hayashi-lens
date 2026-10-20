@@ -5,3 +5,4 @@
 - skill/ … スキル本体（SKILL.md + references）
 - docs/ … 構想・経緯・ケーススタディ記録
 - HANDOFF.md … 引き継ぎと次にやること
+- docs/archive/ … Cowork セッションの会話記録・アンケート・議事録抽出（振り返り用）
