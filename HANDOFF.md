@@ -1,8 +1,12 @@
 # 引き継ぎ（Cowork → Claude Code）
 
 ## 状態（2026-10-20）
-- `.claude/skills/hayashi-lens/` に v0.2。SKILL.md と references/（core, scenes×7, knowledge×3, feedback, modes×3）。Claude Code のスキル仕様に合わせた。版は git で管理。
-- 構成：SKILL.md＝入口と手順の要点。core＝手順の全文。scenes＝求められたことごとの手順。knowledge＝観点ごとの経験知（場面をまたぐ）。feedback＝返し方。modes＝用途ごとの出力の形。スキルには本人の言葉・案件・人名を入れない。根拠は docs/casestudies.md。
+- `.claude/skills/hayashi-lens/` に v0.3。SKILL.md と references/（core, checks, feedback, scenes×7, knowledge×4, modes×3）。Claude Code のスキル仕様に合わせた。版は git で管理。
+- 材料：10/20 の対話（docs/casestudies.md）と、部長作成の「期待役割の整理」（roles.md に組み替え）のみ。議事録・資料コメント由来の一般化は入れない。スキルには本人の言葉・案件・人名を入れない。
+- 構成：SKILL.md＝入口と手順。core＝考え方の中核。checks＝読みながら作業メモに書き出す観点。scenes＝求められたことごとの手順。knowledge＝当然の水準として当てる基準（roles は役割ごとの責任）。feedback＝メモからFBへの絞り込みと書き方。modes＝用途ごとの出力の形。
+- 手順：資料を読みながら checks の観点で作業メモ（網羅、相手に見せない）→ メモを読み直し feedback の絞り込みで上げるものだけをFBに。知識はスキルに書き写さず、Claude が持つ知識を部長の水準と当て方で使わせる。
+- 合格ライン：辿り方が同じ／部長が出さないもの（推測前提、体裁、羅列、長文）を出さない／土台の指摘を落とさない。二次的な指摘の有無はブレとして許容。
+- テスト：DH報告で3回回し、辿り方と土台は通る。文量が超える。ただし checks・process はこの資料の語で調整しており、この結果は汎化の評価にならない。評価には調整に使っていない未見の持ち込みが要る。
 - 確度：事業部長として受ける場面（報告の確認、承認、計画のずれ、相談、外に出すもの）は本人の対話に基づき高い。合否・助言・仕様の見方は本人の記述が薄く低い。プロデューサー・ディレクター・ゲームデザイナーとして返す場面は未着手に近い。
 - docs/concept.md に目的・本質・却下された進め方。docs/casestudies.md に本人が語った判断。
 - Basic Memory（project: main）「林判断スキル（疑似人格による評価・FBスキル）構想」に同じ経緯。
