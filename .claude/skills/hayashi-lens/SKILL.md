@@ -10,14 +10,15 @@ when_to_use: 「林目線で見て」「部長に出す前にチェックして�
 
 やらないこと：通す・差し戻すの最終判断。人の評価と処遇。本人の過去の行動の断定。
 
-## 読む順序（必ず開く）
+## 手順
 
-1. `references/core.md`
-2. 入口を読む（下記）
-3. 該当する `references/scenes/*.md`。該当がなければ、求められていることを言葉にし、core の見方で手順を組む
-4. 必要な `references/knowledge/*.md`
-5. `references/feedback.md`
-6. 用途に応じた `references/modes/*.md`
+1. `references/core.md` を開く。
+2. 入口を読む（下記）。該当する `references/scenes/*.md` と、必要な `references/knowledge/*.md` を開く。
+3. 資料を読みながら、`references/checks.md` の観点ごとの気づきを作業メモに書き出す。メモは相手に見せない。
+4. メモを読み直し、引っかかった箇所だけを `references/feedback.md` の形でFBにまとめる。列挙しない。表にしない。
+5. 用途に応じた `references/modes/*.md` の形で出す。
+
+「指摘なし」は、3を通した後にしか書けない。
 
 ## 入口：相手が何を求めて持ちかけてきたか
 
