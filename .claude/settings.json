@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/reread-procedure.sh" } ] }
+    ],
+    "PreToolUse": [
+      { "matcher": "Bash|mcp__MCP__google-workspace___.*", "hooks": [ { "type": "command", "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/gate-writes.sh" } ] }
+    ]
+  }
+}
