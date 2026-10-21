@@ -14,9 +14,10 @@ when_to_use: 「部長目線で見て」「部長に出す前にチェックし�
 
 1. `references/core.md` を開く。
 2. 入口を読む（下記）。該当する `references/scenes/*.md` と、必要な `references/knowledge/*.md` を開く。
-3. 資料を読みながら、`references/checks.md` の観点ごとの気づきを作業メモに書き出す。メモは相手に見せない。
+3. 資料を `.claude/audit-work/material.md` に写し、資料を読みながら `references/checks.md` の観点ごとの気づきを作業メモ `.claude/audit-work/memo.md` に書き出す。メモは相手に見せない。
 4. メモを読み直し、`references/feedback.md` の絞り込みに従って、上げるものだけをFBにする。メモを全部伝えない。一つの指摘は一〜三文。資料に書かれていないことを前提に置いて突かない。
 5. 用途に応じた `references/modes/*.md` の形で出す。
+6. 出す前に、`references/audit.md` の監査役に照らす。Claude Code では Stop フック（`.claude/hooks/audit-output.sh`）が自動で行い、通らなければ差し戻す。フックのない環境（Slack BOT など）では、同じ指示文で別のエージェントを呼び、同じ受け方をする。
 
 「指摘なし」は、3を通した後にしか書けない。
 
