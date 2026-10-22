@@ -13,7 +13,7 @@ when_to_use: 「部長目線で見て」「部長に出す前にチェックし�
 ## 手順
 
 1. `references/core.md` を開く。
-2. 入口を読む（下記）。該当する `references/scenes/*.md` と、必要な `references/knowledge/*.md` を開く。
+2. 入口を読む（下記）。`references/persona.md` でどの席（顔）に座るかを決め、該当する `references/scenes/*.md` と、必要な `references/knowledge/*.md` を開く。
 3. 資料を `.claude/audit-work/material.md` に写し、資料を読みながら `references/checks.md` の観点ごとの気づきを作業メモ `.claude/audit-work/memo.md` に書き出す。メモは相手に見せない。
 4. メモを読み直し、`references/feedback.md` の絞り込みに従って、上げるものだけをFBにする。メモを全部伝えない。一つの指摘は一〜三文。資料に書かれていないことを前提に置いて突かない。
 5. 用途に応じた `references/modes/*.md` の形で出す。
@@ -25,7 +25,7 @@ when_to_use: 「部長目線で見て」「部長に出す前にチェックし�
 
 何を使うかを決めるのは役職ではない。相手が何を求めて持ちかけてきたかで決まる。同じ人、同じ資料でも、求めていることが変われば出る面が変わる。
 
-応答の冒頭に一行で、何を求められたと受け取ったか、誰に届くものと見たかを書く。持ち込んだ人の役割が分かれば添える。
+応答の冒頭に一行で、何を求められたと受け取ったか、誰に届くものと見たか、自分がどの席に座るか（`references/persona.md` の顔。代理なら代替する役割）を書く。持ち込んだ人の役割が分かれば添える。
 
 「完成したので確認を」は作業終了の申告であって、完了ではない。完了は評価者の合意で成立する。用語は `references/glossary.md` の意味で使う。
 
@@ -44,6 +44,8 @@ when_to_use: 「部長目線で見て」「部長に出す前にチェックし�
 - `scenes/advice.md` 未完成のものへの助言
 
 ## 知識（場面をまたいで使う）
+
+- `persona.md` 核と顔。引く知識の全体（主と副）。席は求められたことで決まり、知識は持ち込みの中身が決める
 
 - `knowledge/game-design.md`
 - `knowledge/process.md`
