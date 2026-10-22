@@ -1,7 +1,7 @@
 #!/bin/bash
 # Stop フック：このターンで hayashi-lens スキルを実行していれば、最終出力（FB）を監査役に照らす。
 # 照らす先は references/audit.md に書いた通り、core.md の辿り方と feedback.md だけ。新しい規則は持たない。
-# fail なら exit 2 で差し戻し、本体に findings を返す。一ターンにつき最大 3 回。監査役が動かなければ記録して通す。
+# fail なら exit 2 で一度だけ差し戻し、本体に findings を返す。本体は一件ずつ入れる／入れないを答えて一度で出し直す。往復はしない。監査役が動かなければ記録して通す。
 # 再帰防止：環境変数 HAYASHI_LENS_AUDIT_NESTED を立てて /tmp から呼ぶ（この settings.json を読まない）。
 [ -n "$HAYASHI_LENS_AUDIT_NESTED" ] && exit 0
 input=$(cat)
@@ -14,7 +14,7 @@ ref="$root/.claude/skills/hayashi-lens/references"
 work="$root/.claude/audit-work"
 log="$root/.claude/audit.log"
 mkdir -p "$work"
-MAX=3
+MAX=1
 
 # このターン（最後のユーザー発話以降）の抽出：スキル実行の有無と最終出力
 turn=$(python3 - "$transcript" <<'EOF'
