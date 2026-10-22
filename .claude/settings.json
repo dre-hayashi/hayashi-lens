@@ -27,7 +27,7 @@
           {
             "type": "command",
             "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/audit-output.sh",
-            "timeout": 200
+            "timeout": 420
           }
         ]
       }

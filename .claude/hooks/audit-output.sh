@@ -80,7 +80,7 @@ memo="$work/memo.md"
 } > "$work/prompt.md"
 
 schema='{"type":"object","properties":{"verdict":{"type":"string","enum":["pass","fail"]},"findings":{"type":"array","items":{"type":"object","properties":{"where":{"type":"string"},"what":{"type":"string"},"evidence":{"type":"string"}},"required":["where","what","evidence"]}},"memo":{"type":"string"}},"required":["verdict","findings","memo"]}'
-result=$(cd /tmp && HAYASHI_LENS_AUDIT_NESTED=1 timeout 150 claude -p --model haiku --output-format json --json-schema "$schema" --allowedTools StructuredOutput --disallowedTools Bash Read Write Edit Glob Grep WebSearch WebFetch Agent Skill < "$work/prompt.md" 2>"$work/err.txt")
+result=$(cd /tmp && HAYASHI_LENS_AUDIT_NESTED=1 timeout 360 claude -p --model haiku --output-format json --json-schema "$schema" --allowedTools StructuredOutput --disallowedTools Bash Read Write Edit Glob Grep WebSearch WebFetch Agent Skill < "$work/prompt.md" 2>"$work/err.txt")
 verdictjson=$(echo "$result" | jq -c '.structured_output // empty' 2>/dev/null)
 if [ -z "$verdictjson" ]; then
   verdictjson=$(echo "$result" | jq -r '.result // empty' 2>/dev/null | sed -n '/{/,$p' | jq -c . 2>/dev/null)
