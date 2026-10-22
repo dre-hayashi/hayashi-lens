@@ -2,6 +2,7 @@
 # Stop フック：このターンで hayashi-lens スキルを実行していれば、最終出力（FB）を監査役に照らす。
 # 照らす先は references/audit.md に書いた通り、core.md の辿り方と feedback.md だけ。新しい規則は持たない。
 # fail なら exit 2 で一度だけ差し戻し、本体に findings を返す。本体は一件ずつ入れる／入れないを答えて一度で出し直す。往復はしない。監査役が動かなければ記録して通す。
+# 監査役はスキルを実行するモデルと同じ級（opus）。下のモデルでは読み落としと指摘の入れ替わりが出た（2026-10-22）。
 # 再帰防止：環境変数 HAYASHI_LENS_AUDIT_NESTED を立てて /tmp から呼ぶ（この settings.json を読まない）。
 [ -n "$HAYASHI_LENS_AUDIT_NESTED" ] && exit 0
 input=$(cat)
@@ -80,7 +81,7 @@ memo="$work/memo.md"
 } > "$work/prompt.md"
 
 schema='{"type":"object","properties":{"verdict":{"type":"string","enum":["pass","fail"]},"findings":{"type":"array","items":{"type":"object","properties":{"where":{"type":"string"},"what":{"type":"string"},"evidence":{"type":"string"}},"required":["where","what","evidence"]}},"memo":{"type":"string"}},"required":["verdict","findings","memo"]}'
-result=$(cd /tmp && HAYASHI_LENS_AUDIT_NESTED=1 timeout 360 claude -p --model haiku --output-format json --json-schema "$schema" --allowedTools StructuredOutput --disallowedTools Bash Read Write Edit Glob Grep WebSearch WebFetch Agent Skill < "$work/prompt.md" 2>"$work/err.txt")
+result=$(cd /tmp && HAYASHI_LENS_AUDIT_NESTED=1 timeout 360 claude -p --model opus --output-format json --json-schema "$schema" --allowedTools StructuredOutput --disallowedTools Bash Read Write Edit Glob Grep WebSearch WebFetch Agent Skill < "$work/prompt.md" 2>"$work/err.txt")
 verdictjson=$(echo "$result" | jq -c '.structured_output // empty' 2>/dev/null)
 if [ -z "$verdictjson" ]; then
   verdictjson=$(echo "$result" | jq -r '.result // empty' 2>/dev/null | sed -n '/{/,$p' | jq -c . 2>/dev/null)
