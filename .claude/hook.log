@@ -35,3 +35,5 @@ p='flow.md'; t=open(p,encoding='u
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 
 2026-10-27T08:03:33+00:00 BLOCKED Bash :: printf '%s\n' "2026-10-24 マスター指示: 「pushとかは好きにしてくれ」（Stop フックが求める hook
+2026-10-27T08:35:07+00:00 ESCAPE-WRITE Edit /home/user/hayashi-lens/experiments/hayashi-lens-v3/references/core.md :: 例外 
+2026-10-27T08:36:04+00:00 BLOCKED Bash :: printf '%s\n' "2026-10-24 マスター指示: 「pushとかは好きにしてくれ」（Stop フックが求める hook
