@@ -1,7 +1,8 @@
 #!/bin/bash
 # Stop フック：このターンで hayashi-lens スキルを実行していれば、最終出力（FB）を監査役に照らす。
-# 照らす先は references/audit.md に書いた通り、core.md の辿り方と feedback.md だけ。新しい規則は持たない。
-# fail なら exit 2 で一度だけ差し戻し、本体に findings を返す。本体は一件ずつ入れる／入れないを答えて一度で出し直す。往復はしない。監査役が動かなければ記録して通す。
+# 照らす先は references/audit.md に書いた通り、feedback.md の上げる／上げないと core.md の辿り方 2・5 だけ。新しい規則は持たない。
+# 監査が見るのは取捨選択（本人が答えなければ先に進めないものだけか、土台の判断が先か、列挙になっていないか）。
+# fail なら exit 2 で一度だけ差し戻し、本体に findings を返す。本体は一件ずつ外す／残すを答えて一度で出し直す。出し直した FB は再監査しない（n > MAX で通す）。監査役が動かなければ記録して通す。
 # 監査役はスキルを実行するモデルと同じ級（opus）。下のモデルでは読み落としと指摘の入れ替わりが出た（2026-10-22）。
 # 再帰防止：環境変数 HAYASHI_LENS_AUDIT_NESTED を立てて /tmp から呼ぶ（この settings.json を読まない）。
 [ -n "$HAYASHI_LENS_AUDIT_NESTED" ] && exit 0
@@ -69,7 +70,7 @@ memo="$work/memo.md"
   echo; echo "# やらないこと"
   sed -n '/^## やらないこと/,/^## 本体の受け方/p' "$ref/audit.md" | sed '1d;$d'
   echo; echo "# 照らす先のファイル"
-  for f in "$ref/core.md" "$ref/persona.md" "$ref/feedback.md" "$ref/style.md" "$ref/checks.md" "$ref"/scenes/*.md "$ref/knowledge/roles.md" "$ref"/modes/*.md; do
+  for f in "$ref/core.md" "$ref/feedback.md" "$ref"/scenes/*.md; do
     echo; echo "## $(basename "$f")"; cat "$f"
   done
   echo; echo "# 持ち込まれた資料"
@@ -97,11 +98,6 @@ echo "$(date -Is) $uid 監査 $n 回目: $verdict findings=$count memo=$(echo "$
 [ "$verdict" = "pass" ] && exit 0
 
 findings=$(echo "$verdictjson" | jq -r '.findings[] | "- [\(.where)] \(.what)（根拠: \(.evidence)）"')
-if [ "$n" -ge "$MAX" ]; then
-  echo "監査（$n 回目、最終）が通らなかった。FB の末尾に「監査未通過」として以下を残し、ターンを終える。
-$findings" >&2
-  exit 2
-fi
-echo "監査（$n 回目／最大 $MAX 回）: fail。findings を一件ずつ取り、「入れる」か「入れない（feedback.md の上げないのどれに当たるか）」を答えてから、FB を出し直す。土台が崩れた後の継続と、役割の責任の問い残しは、理由を付けて入れないとは言えない。
+echo "監査: fail。findings を一件ずつ取り、「外す」か「残す（本人が答えなければ先に進めない理由を一文）」を作業メモに書いてから、FB を一度だけ出し直す。「土台が先」の指摘は残すとは言えない。土台の判断を先に立て、その先の指摘を外す。答えは FB に書かない。出し直した FB は再監査しない。
 $findings" >&2
 exit 2
