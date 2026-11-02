@@ -6,3 +6,4 @@
 2026-10-22T09:37:54+00:00 run3 監査 1 回目: fail findings=5 memo=あり
 2026-10-22T09:46:24+00:00 run1 監査 1 回目: fail findings=10 memo=あり
 2026-10-22T10:23:34+00:00 run4 監査 1 回目: fail findings=9 memo=あり
+2026-11-02T08:43:28+00:00 subagent-run 監査 1 回目: fail findings=1 memo=あり（出し直し、再監査なし）
