@@ -29,6 +29,15 @@
             "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/no-escape-write.sh"
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/gate-runs.sh"
+          }
+        ]
       }
     ],
     "Stop": [
