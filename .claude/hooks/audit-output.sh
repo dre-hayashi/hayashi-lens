@@ -70,7 +70,7 @@ memo="$work/memo.md"
   echo; echo "# やらないこと"
   sed -n '/^## やらないこと/,/^## 本体の受け方/p' "$ref/audit.md" | sed '1d;$d'
   echo; echo "# 照らす先のファイル"
-  for f in "$ref/core.md" "$ref/feedback.md" "$ref"/scenes/*.md; do
+  for f in "$ref/core.md" "$ref/feedback.md" "$ref/style.md" "$ref"/scenes/*.md; do
     echo; echo "## $(basename "$f")"; cat "$f"
   done
   echo; echo "# 持ち込まれた資料"
