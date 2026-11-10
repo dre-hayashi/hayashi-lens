@@ -38,6 +38,15 @@
             "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/gate-runs.sh"
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/gate-transcribe.sh"
+          }
+        ]
       }
     ],
     "Stop": [
