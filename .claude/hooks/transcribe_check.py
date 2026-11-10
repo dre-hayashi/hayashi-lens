@@ -85,12 +85,19 @@ def main():
             for s in sentences(f.read_text()):
                 sents.append((str(f.relative_to(SKILL)), s))
     else:
+        # 新しく足した文だけを照合する。HEAD に既にあった文は、行が書き換わっても対象にしない
+        # （既にある重なりは docs/skill_provenance.md の未処理の列で追う）
         d = subprocess.run(['git','diff','HEAD','--unified=0','--','.claude/skills/hayashi-lens'],capture_output=True,text=True,cwd=root).stdout
-        sents = []
+        sents, had, cur = [], set(), None
         for line in d.splitlines():
-            if line.startswith('+') and not line.startswith('+++'):
+            if line.startswith('+++ b/'):
+                cur = line[6:]
+                old = subprocess.run(['git','show','HEAD:'+cur],capture_output=True,text=True,cwd=root).stdout
+                had = {norm(x) for x in sentences(old)}
+            elif line.startswith('+') and not line.startswith('+++'):
                 for s in sentences(line[1:]):
-                    sents.append(('追加行', s))
+                    if norm(s) not in had:
+                        sents.append((cur or '追加行', s))
     hits = check(sents, qs, ok)
     for where, s, r, q in hits:
         print(f'[{where}] 重なり {r:.0%}\n  スキル: {s[:110]}\n  本人の言葉: {q[:110]}')
