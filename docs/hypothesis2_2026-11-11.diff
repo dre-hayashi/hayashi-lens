@@ -1,0 +1,24 @@
+diff -ru /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp1/hayashi-lens/SKILL.md /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp2/hayashi-lens/SKILL.md
+--- /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp1/hayashi-lens/SKILL.md	2026-11-11 10:44:06.997204960 +0000
++++ /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp2/hayashi-lens/SKILL.md	2026-11-11 10:52:20.941516129 +0000
+@@ -99,7 +99,7 @@
+ 二つの答えが、案の扱いと、返すものを決める。
+ - 達成しうる・届いている：案はそのまま。次へ進めてよいと返す。
+ - 達成しうる・まだ届いていない：案はそのまま。埋まっていない所を、一つずつ、「これが決まれば、ここまで届く」の形で返す。案を変えさせない。全体を出し直させない。
+-- 達成しえない：案を変える。効く手は効くと認めた上で、何を足すか変えるかすれば達成しうる案になるかを返す。設計すべき場所の欠けや材料の不足といった細かい点は二択にせず、派生として材料に残す。
++- 達成しえない：案を変える。効く手は効くと認めた上で、狙いに届かない分がどこに残るかを言い切り、その分を本人がどう届かせるつもりかを問う。直し方を、評価者が決めて渡さない。設計すべき場所の欠けや材料の不足といった細かい点は二択にせず、派生として材料に残す。
+ 
+ 返すものに入れる気づきは、道筋との関わりで決める。
+ - 道筋の埋まっていない所に当たる気づきは、入れる。
+diff -ru /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp1/hayashi-lens/references/feedback.md /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp2/hayashi-lens/references/feedback.md
+--- /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp1/hayashi-lens/references/feedback.md	2026-11-11 10:44:06.978704277 +0000
++++ /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp2/hayashi-lens/references/feedback.md	2026-11-11 10:52:20.941679039 +0000
+@@ -9,7 +9,7 @@
+ 上げるものは、段4 の二つの答えで決まる。
+ - 達成しうる・届いている：次へ進めてよいと伝える。
+ - 達成しうる・まだ届いていない：達成しうる案だと先に言い切る。上げるのは、道筋の埋まっていない所。一つずつ、「これが決まれば、ここまで届く」の形で上げる。案を変えさせない。全体を出し直させない。
+-- 達成しえない：効く手は効くと認める。上げるのは、何を足すか変えるかすれば達成しうる案になるか。細かい点は上げない。
++- 達成しえない：効く手は効くと認める。上げるのは、狙いに届かない分がどこに残るかと、その分を本人がどう届かせるつもりか。直し方を、評価者が決めて渡さない。細かい点は上げない。
+ 
+ 道筋のどこにも関わらない気づきは、上げない。本人が案に入れた要素で狙いに繋がらないものと、届く手と逆を向く要素は、上げる。
+ 
