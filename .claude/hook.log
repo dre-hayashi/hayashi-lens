@@ -61,3 +61,4 @@ p = pathlib.Path('/home/user/hayashi-lens/doc
 2026-11-11T14:21:11+00:00 PLAIN-WORDS :: 席
 2026-11-11T14:24:52+00:00 PLAIN-WORDS :: 土台
 2026-11-11T14:51:28+00:00 PLAIN-WORDS :: 写し
+2026-11-11T15:11:31+00:00 BLOCKED-TRANSCRIBE :: cp /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/sc
