@@ -144,5 +144,6 @@
 ## 構成
 
 - `.claude/skills/hayashi-lens/`：SKILL.md（入口と手順）、references/core（考え方の中核）、feedback（返すものの絞り込み）、audit（出す前に、本人の側から読む確認）、scenes（求められたことごとの土台と、そこから従うもの）、knowledge（当て方。知識は書かない。roles は役割ごとの責任）、modes（出力の形）。
+- `docs/trials.md`：試したことの記録。何を試して採用したか、何を試して外れたか。スキルを変える前に読み、試すたびに一行足す（2026-11-11、本人「何を試して採用したのか、何を試してダメだったのか記録しないと後で困るぞ」）。`docs/skill_provenance.md`：どの部分が、何の失敗を直すために入っているか。
 - `docs/casestudies.md`：オーナーの言葉と、どの手順の根拠か。`docs/usage-log.md`：使用ごとの計測。`docs/archive/`：Cowork の記録。
 - 育て方：使って食い違ったら、オーナーが一言言う。反映するかはオーナーが決める。スキル側で勝手に一般化しない。
