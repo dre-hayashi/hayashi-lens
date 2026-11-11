@@ -14,13 +14,15 @@ if [ ! -f "$ok" ] || [ $(( $(date +%s) - $(stat -c %Y "$ok") )) -ge 21600 ]; the
   echo "ケースの設定に本人の確認が無い（.claude/design-approved が無いか、6時間を過ぎている）。実行しない。" >&2; exit 2
 fi
 P=$1; c=$2; t=$3; mode=$4; pf=$5
+# 六つ目の引数（省略可）：スキルの写しの場所。仮説を入れた写しを試すときに渡す。省略するとリポジトリのスキルを使う。
+src="${6:-$root/.claude/skills/hayashi-lens}"
 case "$P" in "$root"*) echo "実行用のフォルダはリポジトリの外に置く。" >&2; exit 2;; esac
 D="$P/$c"
 [ -d "$D" ] || { echo "$D が無い。" >&2; exit 2; }
 if [ "$mode" = new ]; then
   mkdir -p "$D/.claude/skills" "$P/home"
-  cp -r "$root/.claude/skills/hayashi-lens" "$D/.claude/skills/"
-  git -C "$root" rev-parse --short HEAD > "$D/skill_commit"
+  cp -r "$src" "$D/.claude/skills/hayashi-lens"
+  { git -C "$root" rev-parse --short HEAD; echo "src=$src"; } > "$D/skill_commit"
 fi
 cd "$D" || exit 1
 if [ "$mode" = new ]; then sid=$(cat /proc/sys/kernel/random/uuid); echo "$sid" > sid; sess="--session-id $sid"; else sess="--resume $(cat sid)"; fi
