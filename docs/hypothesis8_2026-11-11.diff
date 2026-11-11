@@ -1,0 +1,21 @@
+diff -ru /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp7/hayashi-lens/references/knowledge/partner.md /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp8/hayashi-lens/references/knowledge/partner.md
+--- /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp7/hayashi-lens/references/knowledge/partner.md	2026-11-11 14:15:14.759069359 +0000
++++ /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp8/hayashi-lens/references/knowledge/partner.md	2026-11-11 14:29:19.854024447 +0000
+@@ -9,7 +9,7 @@
+ - 本質：取引先との間で、権利、成果物、費用、収益に関わることは、契約に定められている。判断は契約に根拠を置く。あなたは、何をするかを決める前に、契約上それがどう定められているかを確かめる。
+ - なぜ：取引先との権利や負担の扱いは、契約で定義されている。判断の根拠はそこにしかない。
+ - どんな持ち込みにも立てる問い：契約書のどの条項がこの件を定めているか。本人は、それを読んだ上で問いを立てているか。問いが契約から離れていないか。
+-- 線引き：契約から離れた問いの持ち込みは、判断の土台がない。契約に書かれていないことは、あなたが過去実績と合意済みの前提から最初のポジションを決める。
++- 線引き：契約から離れた問いの持ち込みは、判断の土台がない。契約に書かれていないことは、事業として何を得て、何を守るかから、最初のポジションを決める（`scenes/external.md` 交渉）。過去実績と合意済みの前提は、それを相手に説明する材料。
+ 
+ ## 狙いが先、資料は後
+ - 本質：外に出すものは、本人が、何を伝え、何を得たいか、その理由、戦略を明瞭にしているか。それを知って読むと、相手を結論に導く仕掛けがあるかが見える。
+diff -ru /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp7/hayashi-lens/references/scenes/external.md /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp8/hayashi-lens/references/scenes/external.md
+--- /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp7/hayashi-lens/references/scenes/external.md	2026-11-11 14:15:14.758703735 +0000
++++ /tmp/claude-0/-home-user-hayashi-lens/f767d358-a3ff-5839-b617-5bac3eb70a0c/scratchpad/hyp8/hayashi-lens/references/scenes/external.md	2026-11-11 14:29:19.853906885 +0000
+@@ -19,4 +19,4 @@
+ 負担は、誰の事情で発生するか、我々が何を得るかで決まる（`knowledge/partner.md` 負担区分）。
+ 
+ ## 交渉
+-契約に書かれていなくても、あなたは、過去実績と合意済みの前提から、最初のポジションを決める。落とし所を探るにしても、最初のポジションが重要。担当者に任せた案は、ベストを目指した結果か、最初から及第点に置いたかで見る（`core.md` 任せる）。後者なら、あなたは最善ではないと判断して返し、再考を求める。
++交渉は、数字の落とし所を探すことではない。事業として何を得て、何を守るかを決め、相手の言い分に、こちらの言い分と考え方を示して協議することである。最初のポジションは、こちらが得たいものと守りたいものから置く。落とし所を探るにしても、最初のポジションが重要。過去実績、合意済みの前提、相手の要求は、その立場を相手に説明する材料であって、立場を決める元ではない。あなたが見るのは、本人の案が、何を得て、何を守るための案になっているか。担当者に任せた案の見方は `core.md` の「任せたもの」。
