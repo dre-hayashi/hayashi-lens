@@ -66,3 +66,6 @@ p = pathlib.Path('/home/user/hayashi-lens/doc
 2026-11-21T01:27:35+00:00 ESCAPE :: でしょう 
 2026-11-21T02:47:06+00:00 ESCAPE-WRITE Bash .claude/skills/hayashi-lens :: 保証 
 2026-11-21T11:08:46+00:00 ESCAPE :: でしょう 
+2026-11-21T15:27:18+00:00 BLOCKED-PROVENANCE :: python3 - <<'EOF'
+p='docs/skill_provenance.md'
+s=open(p,encoding='utf-8').read()
