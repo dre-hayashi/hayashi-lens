@@ -10,8 +10,11 @@
 set -u
 root="$(cd "$(dirname "$0")/.." && pwd)"
 ok="$root/.claude/design-approved"
+# 2026-11-21：本人の指示で、この検査を一時的に外せるようにした。外している間は .claude/gate-suspended を置く（本人の言葉と日付を書く）。戻すには、そのファイルを消す。
+if [ ! -f "$root/.claude/gate-suspended" ]; then
 if [ ! -f "$ok" ] || [ $(( $(date +%s) - $(stat -c %Y "$ok") )) -ge 21600 ]; then
   echo "ケースの設定に本人の確認が無い（.claude/design-approved が無いか、6時間を過ぎている）。実行しない。" >&2; exit 2
+fi
 fi
 P=$1; c=$2; t=$3; mode=$4; pf=$5
 # 六つ目の引数（省略可）：スキルの写しの場所。仮説を入れた写しを試すときに渡す。省略するとリポジトリのスキルを使う。
